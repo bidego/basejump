@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 			res.status(err.status).end()
 		}
 		else {
-			console.log('Enviado: ', fileName')
+			console.log('Enviado: ', fileName)
 		}
 	})
 })
