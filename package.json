@@ -1,0 +1,24 @@
+{
+  "name": "basejump",
+  "version": "1.0.0",
+  "description": "timestamp microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error : no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bidego/basejump.git"
+  },
+  "author": "gonzalo.bide@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bidego/basejump/issues"
+  },
+  "homepage": "https://github.com/bidego/basejump#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "moment": "^2.19.1"
+  }
+}
