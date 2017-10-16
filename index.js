@@ -1,47 +1,18 @@
-var fa = require('fs')
-var path = require('path')
-var server = require('express')
-var app = server()
-var port = process.env.PORT || 3500
+var express = require('express');
+var app = express();
 
-var moment = require('moment')
+app.set('port', (process.env.PORT || 5000));
 
-app.listen(port, function() {
-	console.log('Listening PORT '+port)
-}
+app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res) {
-	var fileName = path.join(__dirname, 'index.html')
-	res.sendFile(fileName, function (err) {
-		if (err) {
-			console.log(err)
-			res.status(err.status).end()
-		}
-		else {
-			console.log('Enviado: ', fileName)
-		}
-	})
-})
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
-app.get('/:datestring', function(req,res) {
-  var myDate;
-  if(/^\d{8,}$/.test(req.params.datestring)) {
-    myDate = moment(req.params.datestring, "X");
-  } else {
-    myDate = moment(req.params.datestring, "MMMM D, YYYY");
-  }
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
 
-  if(myDate.isValid()) {
-    res.json({
-      unix: myDate.format("X"),
-      natural: myDate.format("MMMM D, YYYY")
-    });
-  } else {
-    res.json({
-      unix: null,
-      natural: null
-    });
-  }
-
-
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
