@@ -1,6 +1,6 @@
 {
   "name": "basejump",
-  "version": "0.2.0",
+  "version": "0.1.9",
   "description": "A Microservice Timestamp. Built in NodeJs. Served by Heroku",
   "engines": {
     "node": "6.11.1"
