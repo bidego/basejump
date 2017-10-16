@@ -18,7 +18,7 @@ $ npm start
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-![Deployed @Heroku](https://bidego-basejump.herokuapp.com/)
+[Deployed @Heroku](https://bidego-basejump.herokuapp.com/)
 
 ## Documentation
 
