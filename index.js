@@ -25,6 +25,7 @@ app.get('/', function(req, res) {
     }
   });
 });
+*/
 app.get('/:datestring', function(req,res) {
   var myDate;
   if(/^\d{8,}$/.test(req.params.datestring)) {
@@ -48,7 +49,6 @@ app.get('/:datestring', function(req,res) {
 
 });
 
-*/
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
