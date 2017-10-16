@@ -1,4 +1,6 @@
-# ms basejump
+# API basejump
+
+By [bidego](https://github.com/bidego/). For FreeCodeCamp
 
 A Microservice Timestamp built in Node.js app using [Express 4](http://expressjs.com/).
 Deployed width heroku
